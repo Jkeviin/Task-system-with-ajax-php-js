@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <title>Aplicación de Tarea</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand ms-4">Aplicación de Tareas</a>
+        <ul class="navbar-nav ms-auto">
+            <form class="form-check-inline my-2 my-lg-0">
+                <input type="search" id="search" class="form-control mr-sm-2" placeholder="Busca tu Tarea">
+            </form>
+        </ul>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <input type="hidden" id="taskId"> <!-- Campo oculto para guardar el id de la tarea -->
+                            <div class="input-group">
+                                <input type="text" id="name" placeholder="Nombre Tarea" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Descripción de Tarea"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-12 text-center">
+                                Guardar Tarea
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card my-2" id="task-result">
+                    <div class="card-body p-0 pt-3">
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./src/JS/app.js"></script>
+</body>
+</html>
